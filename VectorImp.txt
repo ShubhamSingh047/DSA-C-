@@ -1,0 +1,2 @@
+differnct ways to intialize vector
+https://www.geeksforgeeks.org/initialize-a-vector-in-cpp-different-ways/

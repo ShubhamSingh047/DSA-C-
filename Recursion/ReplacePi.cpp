@@ -1,28 +1,53 @@
-void helper(int s,int e, char input[]){
-    if(input[s]=='\0' || input[s+1]=='\0')return;
-   
-	helper(s+1,e,input);
+//with char array
 
-     if(input[s]=='p' && input[s+1]=='i'){
-        for(int i=e; i>=s+2; i++){
-            input[i+2]=input[i];
-        }
-        input[s]='3';
-        input[s+1]='.';
-        input[s+2]='1';
-        input[s+3]='4';
-    }
-}
+#include <bits/stdc++.h>
+using namespace std;
+
+#include<bits/stdc++.h>
 
 void replacePi(char input[]) {
 	// Write your code here
-	int e=0;
-    for(int i=0; input[i]!='\0'; i++)e++;
-	helper(0, e-1,input);
-}
+	   if(input[0]=='\0' || input[1]=='\0')return;
+   
+	replacePi(input+1);
 
+     if(input[0]=='p' && input[1]=='i'){
+        for(int i= strlen(input); i>=2; i--){
+            input[i+2]=input[i];
+        }
+        input[0]='3';
+        input[1]='.';
+        input[2]='1';
+        input[3]='4';
+    }
+}
 
 int main(){
     char input[]="pixpi";
     replacePi(input);
+    for(auto i:input)cout<<i;
 }
+
+
+//with String
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// string replacePi(string s){
+//     if(s.length()==0 || s.length()==1)return s;
+
+//     if(s[0]=='p'&& s[1]=='i'){
+//         string res=replacePi(s.substr(2));
+//         return "3.14"+res;
+//     }else{
+//         return s[0]+replacePi(s.substr(1));
+//     }
+// }
+
+// int main(){
+//     string str="pipixpipi";
+//     cout<<replacePi(str);
+// }
+

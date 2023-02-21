@@ -3,29 +3,39 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#include<bits/stdc++.h>
+
+void shift(char input[], int index){
+    int x = strlen(input);
+    while (x>=index)
+    {
+        input[x+2]=input[x];
+        x--;
+    }
+    
+}
 
 void replacePi(char input[]) {
 	// Write your code here
-	   if(input[0]=='\0' || input[1]=='\0')return;
-   
-	replacePi(input+1);
-
-     if(input[0]=='p' && input[1]=='i'){
-        for(int i= strlen(input); i>=2; i--){
-            input[i+2]=input[i];
-        }
-        input[0]='3';
-        input[1]='.';
-        input[2]='1';
-        input[3]='4';
+    int i=0;
+    while (input[i]!='\0'){
+        if(input[i]=='p' && input[i+1]=='i'){
+            shift(input,i+2);
+            input[i]='3';
+            input[i+1]='.';
+            input[i+2]='1';
+            input[i+3]='4';
+            i+=4;
+            continue;
+        }    
+        i++;
     }
 }
 
 int main(){
-    char input[]="pixpi";
+    char input[]="pi";
     replacePi(input);
-    for(auto i:input)cout<<i;
+cout<< input;
+    
 }
 
 

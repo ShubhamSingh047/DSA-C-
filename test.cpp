@@ -1,31 +1,43 @@
 //with char array
 
 #include <bits/stdc++.h>
+
 using namespace std;
 
-void replacePi(char input[],int index) {
+void reverse(char input[],int s,int l) {
 
-	if(input[index]=='\0' && input[index+1]=='\0') return;
-
-replacePi(input,index+1);
-    if(input[index]=='p' && input[index+1]=='i'){
-        int x = strlen(input);
-        while (x>=index)
-        {
-            input[x+2]=input[x];
-            x--;
-        }
-        input[index]='3';
-        input[index+1]='.';
-        input[index+2]='1';
-        input[index+3]='4';
-
+	while (s<=l){
+        // cout<<input[s]<<input[l];
+        swap(input[s],input[l]);
+        s++;
+        l--;
     }
+    
 }
 
 int main(){
-    char input[]="xpixxpirrpi";
-    replacePi(input,0);
-cout<< input;
+     string b;
+    getline(cin,b);
+    char input[]="my name";
+    int start=0;
+    for (int i = 0; i < strlen(input); i++)
+    {
+        if (input[i]==' ' || input[i+1]=='\0')
+        {
+            if(input[i+1]=='\0'){
+                cout<<input<<" "<<start<<" "<<i<<endl;
+                reverse(input,start,i);
+                break;
+            }else{
+                 cout<<input<<" "<<start<<" "<<i<<endl;
+                reverse(input,start,i-1);
+                start=i+1;
+            }            
+        }
+        
+    }
+    
+    cout<<input;
+    return 0;
     
 }

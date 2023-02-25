@@ -17,7 +17,7 @@ void reverse(char input[],int s,int l) {
 
 int main(){
 
-    char input[]="raf tara fta";
+    char input[]="raf ta rafta";
 
     int start=0;
     for (int i = 0; i < strlen(input); i++)

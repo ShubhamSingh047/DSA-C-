@@ -35,7 +35,7 @@ int main(){
     string str;
     cin>>str;
     string res1=Compressed1(str);
-    string res2=Compressed2(str);
-    cout<<res1<<" with sum as well"<<endl;
-    cout<<res2<<" with only compression"<<endl;
+    // string res2=Compressed2(str);
+    cout<<res1<<endl;
+    // cout<<res2<<" with only compression"<<endl;
 }

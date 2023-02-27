@@ -1,6 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
+/*
+    the array should be in increasing order
+    with respect to row and colum
+    eg:-
+    1 2 3 4
+    4 7 8 10
+    6 12 16 20 
+    8 14 22 25
 
+    in above array the element at next row is greater then last row 
+    element & same for colomn. 
+*/
 void Solution(int arr[][100], int row, int col, int x){
     int i=0;
     int j=col-1;

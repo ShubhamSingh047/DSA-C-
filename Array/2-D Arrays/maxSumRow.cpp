@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+/*
+return the max sum row;
+eg:-int arr[3][3]={{1,2,3},{14,15,16},{7,8,9}};
+arr[3][3]={6,45,24}
+ans= 1
+as index of row 1 is greatest;
+*/
 void Solution(int arr[][3]){
     int idv_row_sum=0;
     int sum=0;

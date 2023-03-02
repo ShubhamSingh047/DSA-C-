@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-//rotate array anti clock wise !
+//rotate array anti clock wise using new array!
 void print(int arr[][4],int row, int col){
     for(int i=0; i<row; i++){
         for(int j=0; j<col; j++){

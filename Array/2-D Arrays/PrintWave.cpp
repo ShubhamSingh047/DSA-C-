@@ -14,7 +14,8 @@ void PrintWave(int arr[][4]){
         }
     }
 }
-//working on this
+//completed the only trick to be used is to print top to bottom for 
+//odd element and bottom to top for even.
 int main(){
     int arr[][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
     PrintWave(arr);

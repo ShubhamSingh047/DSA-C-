@@ -18,12 +18,14 @@ bool bruteforce(int arr[],int n){
     return false;
 }
 
-bool optimumApproch(int arr[], int n){
-    unordered_set<int>s;
-    int pre_sum=0;
-    for(int i=0; i<n; i++){
-        pre_sum+=arr[i]
-        if(s.find(pre_sum)!=s.end()){
+bool optimumApproch(int arr[], int n){  
+    // map:- ({"gfg",1},{"ninja":2});
+    //Set=(1,2,3,4)
+    unordered_set<int>s; //HastSet<>();
+    int pre_sum=0; 
+    for(int i=0; i<n; i++){ //s=3,-2,2,4.5
+        pre_sum+=arr[i]; //3+3 =0
+        if(s.find(pre_sum)!=s.end()){ //s.contains(pre_sum);
             return true;
         }
         if(pre_sum==0){

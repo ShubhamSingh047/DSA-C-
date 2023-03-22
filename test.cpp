@@ -11,8 +11,8 @@ using namespace std;
     
 // }
 int main(){
-    vector<int> v={};
-    
-    v[5]=1;
-   cout<<v[5]<<endl;
+    unordered_map<int,int>m;
+    vector<int> v;
+    v.push_back(1);
+    cout<<v[0];
 }

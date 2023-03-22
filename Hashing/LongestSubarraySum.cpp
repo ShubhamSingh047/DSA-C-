@@ -43,7 +43,7 @@ int Optimum_res(int arr[], int sum, int n){
     return res;
 }
 
-int main()  
+int main(){
     // test case1 ans should be 3
     int arr[] = {5,8,-4,-4,9,-2,2};
     int sum=0;

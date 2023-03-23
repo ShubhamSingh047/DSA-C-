@@ -38,6 +38,7 @@ int Optimum_res(int arr[], int sum, int n){
         }
         if(m.find(current_sum-sum)!=m.end()){
             res=max(res, i-m[current_sum-sum]);
+            cout<<res;
         }
     }
     return res;

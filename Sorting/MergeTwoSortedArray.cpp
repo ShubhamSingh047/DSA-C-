@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+//steps to do merge short
 
 void MergeSort(int arr1[], int arr2[], int n1, int n2){
     int i=0, j=0;
